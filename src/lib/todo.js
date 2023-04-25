@@ -23,6 +23,16 @@ export class Todo {
 
 	create = async () => {
 
+		const todoCreated = await performer({
+			type: 'create',
+			payload: {
+				userId: this.userId,
+				title: this.title,
+				completed: this.completed,
+			}
+		}).then((data) => this.id = data.id);
+
+		return todoCreated;
 	}
 
 	update = async () => {
@@ -40,11 +50,13 @@ export class Todo {
 
 	destroy = async () => {
 
-		const todoUpdated = await performer({
+		const todoDeleted = await performer({
 			type: 'destroy',
 			payload: {
 				id: this.id
 			}
 		});
+
+		return todoDeleted;
 	}
 }

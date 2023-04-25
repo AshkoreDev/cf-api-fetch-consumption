@@ -11,7 +11,14 @@
 <body>
 	
 	<section class="root">
+
+		<form id="mainForm" action="https://jsonplaceholder.typicode.com/todos" method="POST">
+			<textarea id="submitText" cols="80" rows="4" autofocus></textarea>
+			<input type="submit" id="submitBtn" value="Agregar">
+		</form>
+
 		<ul id="todoList" class=""></ul>
+
 	</section>
 
 	<script src="./src/lib/index.js" type="module"></script>
