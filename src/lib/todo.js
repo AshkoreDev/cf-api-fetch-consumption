@@ -15,4 +15,26 @@ export class Todo {
 
 		return todos.map((todo) => new Todo(todo));
 	}
+
+	save = async () => {
+
+		(this.id) ? this.update() : this.create();
+	}
+
+	create = async () => {
+
+	}
+
+	update = async () => {
+
+		const todoUpdated = await performer({
+			type: 'update',
+			payload: {
+				id: this.id,
+				title: this.title
+			}
+		});
+
+		return todoUpdated;
+	}
 }
