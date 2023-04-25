@@ -89,5 +89,4 @@ const addNode = (todoList, todo) => {
 
 	const node = buildDOMElement(todo);
 	todoList.prepend(node);
-	console.log(todo)
 };

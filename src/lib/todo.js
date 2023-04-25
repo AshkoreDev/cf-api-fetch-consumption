@@ -28,9 +28,9 @@ export class Todo {
 			payload: {
 				userId: this.userId,
 				title: this.title,
-				completed: this.completed,
+				completed: this.completed
 			}
-		}).then((data) => this.id = data.id);
+		}).then((res) => this.id = res.id);
 
 		return todoCreated;
 	}
