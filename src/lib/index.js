@@ -21,10 +21,19 @@ function listTodos() {
 const buildDOMElement = (todo) => {
 
 	const li = document.createElement('li');
-	const h2 = document.createElement('h2');
+	const title = document.createElement('h2');
+	const closeBtn = document.createElement('button');
 
-	h2.innerText = todo.title;
-	li.append(h2);
+	title.innerText = todo.title;
+	closeBtn.innerText = 'X';
+
+	closeBtn.addEventListener('click', () => {
+
+		todo.destroy();
+		li.remove();
+	});
+
+	li.append(title, closeBtn);
 
 	return li;
 };
