@@ -7,17 +7,18 @@
   <meta name="keywords" content="HTML, CSS, JavaScript">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CF API Consumption With Fetch</title>
+	<link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
 	
-	<section class="root">
+	<section class="container">
 
 		<form id="mainForm" action="https://jsonplaceholder.typicode.com/todos" method="POST">
-			<textarea id="submitText" cols="80" rows="4" autofocus></textarea>
+			<textarea id="submitText" cols="80" rows="2" autofocus></textarea>
 			<input type="submit" id="submitBtn" value="Agregar">
 		</form>
 
-		<ul id="todoList" class=""></ul>
+		<ul id="todoList"></ul>
 
 	</section>
 

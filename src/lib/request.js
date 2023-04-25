@@ -30,7 +30,7 @@ const getPath = (action) => {
 
 	switch(action.type) {
 		case 'getAll':
-			return `${path}?_limit=4`;
+			return `${path}?_limit=40`;
 		case 'getOne':
 			return `${path}/${action.payload.id}`;
 		case 'create':
