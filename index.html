@@ -15,14 +15,15 @@
 	<section class="container">
 
 		<form id="mainForm" action="https://jsonplaceholder.typicode.com/todos" method="POST">
-			<textarea id="submitText" cols="80" rows="2" autofocus aria-label="Add new ToDo"></textarea>
+			<textarea id="submitText" cols="80" rows="2" autofocus aria-label="Add new ToDo" placeholder="Add new ToDo"></textarea>
 			<input type="submit" id="submitBtn" value="Send">
 		</form>
 
 		<ul id="todoList"></ul>
 
 	</section>
-
+	
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="./src/lib/index.js" type="module"></script>
 	
 </body>

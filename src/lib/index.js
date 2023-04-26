@@ -31,8 +31,11 @@ function listTodos() {
 
 		} else {
 
-			alert('texto vacio');
-			submitText.autofocus = true;
+			Swal.fire({
+				title: `New ToDo can't be empty`,
+				icon: 'error',
+				showCloseButton: true
+			});
 			submitBtn.disabled = false;
 		}
 
